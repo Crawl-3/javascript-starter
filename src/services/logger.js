@@ -1,0 +1,23 @@
+const { createLogger, format, transports } = require("winston");
+
+const logsPath = process.env.NODE_ENV === "production " ? "logs/production" : "logs/development";
+
+const Logger = createLogger({
+    level: "info",
+    format: format.json(),
+    transports: [
+        new transports.File({ filename: `${logsPath}/error.log`, level: "error" }),
+        new transports.File({ filename: `${logsPath}/warn.log`, level: "warn" }),
+        new transports.File({ filename: `${logsPath}/combined.log` }),
+    ],
+});
+
+if (process.env.NODE_ENV !== "production") {
+    Logger.add(
+        new transports.Console({
+            format: format.simple(),
+        })
+    );
+}
+
+module.exports = Logger;

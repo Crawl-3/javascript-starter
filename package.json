@@ -1,12 +1,31 @@
 {
-  "name": "javascript-starter",
-  "version": "0.1.0",
   "private": true,
+  "name": "javascript-starter",
+  "version": "0.2.0",
+  "author": "WitecuseDev <witecuse@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/WitecuseDev/javascript-starter/blob/main/README.md",
+  "readme": "./README.md",
+  "bugs": {
+    "url": "https://github.com/WitecuseDev/javascript-starter/issues"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": false,
+    "tabWidth": 4,
+    "semi": true
+  },
   "scripts": {
     "start": "node src/index.js",
-    "in-dev": "nodemon --watch src/"
+    "in-dev": "nodemon --watch src/",
+    "fix:prettier": "prettier \"src/**/*.js\" --write"
   },
   "devDependencies": {
-    "nodemon": "^2.0.13"
+    "nodemon": "^2.0.13",
+    "prettier": "^2.4.1"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "winston": "^3.3.3"
   }
 }

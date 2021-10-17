@@ -1,5 +1,5 @@
-const { version } = require("../package.json");
+require("./services/env.js");
+const Logger = require("./services/logger.js");
 
-console.log(`v${version}`);
-console.log("Hello from @witecuse/javascript-starter,");
-console.log("Do not forget to edit the package.json file and star it the github repository :)");
+Logger.info("Hello from @witecusedev/javascript-starter,");
+Logger.info("Do not forget to edit the package.json file and star it the github repository :)");

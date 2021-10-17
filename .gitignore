@@ -18,3 +18,6 @@ venv.bak/
 # Private Node Modules
 node_modules/
 creds.js
+
+# logs
+logs/**/*
