@@ -28,3 +28,6 @@ npm run in-dev
 ```
 npm run fix:prettier
 ```
+
+## License
+This project licensed with `MIT` license
